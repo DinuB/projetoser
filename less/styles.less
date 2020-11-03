@@ -43,6 +43,10 @@ body {
     .siteTitle {
         font-size: 42px;
         font-weight: 700;
+
+        @media @mobile {
+            font-size: 36px;
+        }
     }
 
     .generalHotmartLink{
@@ -156,6 +160,8 @@ body {
         .sectionContainer {
             max-width: 1024px;
             margin: 0 auto;
+
+            padding: 15px;
         }
     }
 
@@ -168,6 +174,7 @@ body {
         align-items: center;
         justify-content: center;
         color: #000;
+        text-align: center;
     
         .headTitle {
             font-size: 42px;
@@ -231,6 +238,13 @@ body {
                 margin: 0 20px 0 0;
                 border-right: 2px solid #fff;
                 font-weight: 700;
+
+                @media @mobile {
+                    border: none;
+                    border-right: none;
+                    margin: 0 0 15px;
+                    font-size: 36px;
+                }
             }
 
             .aboutDesc{
