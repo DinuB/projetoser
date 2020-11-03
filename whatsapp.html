@@ -268,13 +268,31 @@ display: none;
   // }
 
   setInterval(function(){
-    if($('#mce-error-response').css('display') == 'block' || $('#mce-success-response').css('display') == 'block' ){
+    // if($('#mce-error-response').css('display') == 'block' || $('#mce-success-response').css('display') == 'block' ){
+    //   console.log('true');
+    //   $("#body").addClass('hide')
+    //   $("#whatsapp").removeClass('hide')
+    //   $("#whatsapp").addClass('show')
+    //   localStorage.setItem('subscribed', 'false')
+    // } 
+
+    var hasEmail = document.getElementById("mce-error-response")
+    var hasEmailDisplay = hasEmail.style.display
+
+    var subscribedEmail = document.getElementById("mce-success-response")
+    var subscribedEmailDisplay = subscribedEmail.style.display
+
+    var body = document.getElementById("body")
+    var whatsapp = document.getElementById("whatsapp")
+
+    if (subscribedEmailDisplay == "block" || hasEmailDisplay == "block") {
       console.log('true');
-      $("#body").addClass('hide')
-      $("#whatsapp").removeClass('hide')
-      $("#whatsapp").addClass('show')
-      localStorage.setItem('subscribed', 'false')
-    } 
+      body.classList.add('hide')
+      whatsapp.classList.remove('hide')
+      whatsapp.classList.add('show')
+    }
+
+
   },1000);
 
   function whatsApp() {
