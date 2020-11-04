@@ -32,7 +32,7 @@ body {
     &::-webkit-scrollbar {
         width: 10px;
       &-track {
-          background: rgba(255, 255, 255, 0);
+          background: rgba(86, 244, 255, 0);
       }
       
       &-thumb {
@@ -105,13 +105,13 @@ body {
         background-color: rgba(255, 255, 255, 0.2);
         border: none;
         border-radius: 35px;
-        padding: 4px;
+        padding: 6px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: start;
         transition: all ease 1s;
-        background: #2846d2;
+        background: #2882d2;
         color: #fff;
         cursor: pointer;
         text-transform: lowercase;
@@ -152,9 +152,9 @@ body {
             
         // active button CTA
         &.active{
-            background-color: #bd00fc;
+            background: #0088ff;
             .buttonLink_circle {
-                left: 80%;
+                left: 85%;
                 transition: all ease .5s;
             }
 
@@ -448,7 +448,7 @@ body {
         @media @desk {
             min-height: 100vh;
         }
-        background: rgba(255, 255, 255, 255);
+        background: rgba(255, 255, 255, 1);
 
         .facilitadorasTitle.siteTitle {
             text-align: center;
@@ -472,7 +472,7 @@ body {
                 text-align: center;
                 // box-shadow: 2px 2px 6px 3px #dedada;
                 margin: 16px;
-                cursor: pointer;
+                // cursor: pointer;
 
                 @media @mobile {
                     text-align: center;
@@ -504,6 +504,10 @@ body {
                     a {
                         text-decoration: none;
                         color: #2b2b2b;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
     
