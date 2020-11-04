@@ -21,6 +21,13 @@ body {
     cursor: default;
     
     letter-spacing: 1px;
+    background: url('../src/img/banner-home2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    @media @mobile {
+        background-position: bottom;
+    }
 
     &::-webkit-scrollbar {
         width: 10px;
@@ -41,17 +48,18 @@ body {
     }
     
     .siteTitle {
-        font-size: 42px;
-        font-weight: 700;
+        font-size: 36px;
+        font-weight: 600;
 
         @media @mobile {
-            font-size: 32px !important;
-            margin: 0 0 20px;
+            font-size: 28px !important;
+            margin: 0 0 15px;
         }
     }
 
     .generalHotmartLink{
-        padding: 25px;
+        padding: 50px 25px;
+        background: rgba(119, 255, 250, 0.5);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -178,23 +186,29 @@ body {
     #head {
         width: 100%;
         min-height: 100vh;
-        background: #fff;
+        background: rgba(119, 255, 250, 0.5);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        color: #000;
+        color: #2b2b2b;
         text-align: center;
     
         .headTitle {
-            font-size: 42px;
+            font-size: 36px;
             font-weight: 600;
+        }
+
+        .headerImg {
+            margin: 35px 0;
+            img {
+                max-width: 260px;
+            }
         }
 
         .headDescription {
             font-weight: 400;
             font-size: 20px;
-            margin: 35px 0;
         }
 
         .hotmartLink {
@@ -229,7 +243,9 @@ body {
         justify-content: center;
         color: #fff;
         background: @azulClaro;
-        min-height: 100vh;
+        @media @desk {
+            min-height: 100vh;
+        }
 
         .aboutBoxColumn {
             display: flex;
@@ -243,7 +259,7 @@ body {
             }
 
             .aboutTitle {
-                font-size: 42px;
+                font-size: 36px;
                 padding: 0 20px 0 0;
                 margin: 0 20px 0 0;
                 border-right: 2px solid #fff;
@@ -266,10 +282,13 @@ body {
     }
 
     #paraQuem {
-        min-height: 100vh;
+        @media @desk {
+            min-height: 100vh;
+        }
         display: flex;
         align-items: center;
         justify-content: center;
+        background: rgba(119, 255, 250, 0.5);
 
         .paraQuemTitle {
             text-align: center;
@@ -285,24 +304,19 @@ body {
 
         .paraQuemTopics {
             display: flex;
+            flex-direction: column;
             align-items: flex-start;
-            justify-content: center;
-
-            @media @mobile {
-                flex-direction: column;
-                align-items: flex-start;
-            }
 
             .paraQuemTopic {
                 width: 100%;
-                max-width: 360px;
-                padding: 20px;
-                background: #ff86e9;
-                min-height: 160px;
+                max-width: unset;
+                padding: unset;
+                background: unset;
+                min-height: unset;
                 border: none;
-                border-radius: 10px;
-                margin: 0 20px 0 0;
-                color: #000;
+                border-radius: unset;
+                margin: 10px 0 15px;
+                color: #2b2b2b;
                 font-size: 18px;
                 display: flex;
                 align-items: center;
@@ -310,43 +324,18 @@ body {
                 text-align: center;
                 transition: all ease 0.3s;
                 cursor: pointer;
-
-                @media @mobile {
-                    width: 100%;
-                    max-width: unset;
-                    padding: unset;
-                    background: unset;
-                    min-height: unset;
-                    border: none;
-                    border-radius: unset;
-                    margin: 10px 0 15px;
-                    color: #000;
-                    font-size: 18px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    text-align: center;
-                    transition: all ease 0.3s;
-                    cursor: pointer;
-                }
-
-                &:last-child {
-                    margin: 0 0 0 0;
-                }
-
-                &:hover {
-                    background: #fa3fd8;
-                    color: #fff;
-                }
             }
         }
     }
 
     #fazesDaNossaJornada {
-        min-height: 100vh;
+        @media @desk {
+            min-height: 100vh;
+        }
         display: flex;
         align-items: center;
         justify-content: center;
+        background: rgba(255, 255, 255, 1);
 
         .fazesDaNossaJornadaTitle {
             margin: 0 0 40px;
@@ -414,7 +403,9 @@ body {
         justify-content: center;
         color: #fff;
         background: @azulClaro;
-        min-height: 100vh;
+        @media @desk {
+            min-height: 100vh;
+        }
 
         .sectionContainer {
             display: flex;
@@ -428,7 +419,7 @@ body {
             }
 
             .beneficiosTitle {
-                font-size: 42px;
+                font-size: 36px;
                 padding: 0 20px 0 0;
                 font-weight: 700;
             }
@@ -454,11 +445,14 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 100vh;
+        @media @desk {
+            min-height: 100vh;
+        }
+        background: rgba(255, 255, 255, 255);
 
         .facilitadorasTitle.siteTitle {
             text-align: center;
-            margin: 20px 0 40px;
+            margin: 0px 0 0px;
         }
 
         .facilitadoras {
@@ -475,8 +469,8 @@ body {
                 width: 100%;
                 max-width: 360px;
                 min-height: 300px;
-                // text-align: center;
-                box-shadow: 2px 2px 6px 3px #dedada;
+                text-align: center;
+                // box-shadow: 2px 2px 6px 3px #dedada;
                 margin: 16px;
                 cursor: pointer;
 
@@ -487,8 +481,14 @@ body {
                     min-height: unset;
                 }
 
-                &:hover {
-                    box-shadow: 3px 6px 6px 3px #dedada;
+                // &:hover {
+                //     box-shadow: 3px 6px 6px 3px #dedada;
+                // }
+
+                img {
+                    max-width: 150px;
+                    border-radius: 50%;
+                    margin: 0 0 20px;
                 }
     
                 .nome {
