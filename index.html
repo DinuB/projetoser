@@ -398,8 +398,17 @@
             this.classList.add('active');
 
             setTimeout(function() {
-                window.open('https://pay.hotmart.com/O42699721T?off=x8n6j5tr', '_blank')
-                $('.buttonLink').removeClass('active')
+                
+                var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+                
+                if (isSafari == true ) {
+                    window.location.assign('https://pay.hotmart.com/O42699721T?off=x8n6j5tr')
+//                     window.open('https://pay.hotmart.com/O42699721T?off=x8n6j5tr')
+                } else { 
+                    window.open('https://pay.hotmart.com/O42699721T?off=x8n6j5tr', '_blank')
+                }
+                elems.classList.remove('active');
+//                 $('.buttonLink').removeClass('active')
             }, 1000)
         };
 
