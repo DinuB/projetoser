@@ -400,6 +400,7 @@
             setTimeout(function() {
                 
                 var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+                console.log('SAFARI: ', isSafari)
                 
                 if (isSafari == true ) {
                     window.location.assign('https://pay.hotmart.com/O42699721T?off=x8n6j5tr')
@@ -407,7 +408,8 @@
                 } else { 
                     window.open('https://pay.hotmart.com/O42699721T?off=x8n6j5tr', '_blank')
                 }
-                elems.classList.remove('active');
+                for (var i = 0; i < elems.length; i++)
+                    elems[i].classList.remove('active');
 //                 $('.buttonLink').removeClass('active')
             }, 1000)
         };
