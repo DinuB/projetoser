@@ -313,9 +313,17 @@
 
   function whatsApp() {
     
-    var whatsUrl = 'https://chat.whatsapp.com/DLr14s3lyKF5y42YFUvG0h'
+    // var whatsUrl = 'https://chat.whatsapp.com/DLr14s3lyKF5y42YFUvG0h' 
+    var whatsUrl = 'https://chat.whatsapp.com/I2eH1VrUjLB1U86xYc0YSA' 
 
-    window.open(whatsUrl, '_blank');
+    var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+    console.log('SAFARI: ', isSafari)
+                
+    if (isSafari == true ) {
+      window.location.assign(whatsUrl)
+    } else { 
+      window.open(whatsUrl, '_blank')
+    }
   }
 </script>
 
