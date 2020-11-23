@@ -248,11 +248,13 @@
     var subscribedEmail = document.getElementById("mce-success-response")
     var subscribedEmailDisplay = subscribedEmail.style.display
 
+    var facilitadoras = document.getElementById("facilitadoras")
     var body = document.getElementById("message")
     var whatsapp = document.getElementById("whatsapp")
 
     if (subscribedEmailDisplay != "none") {
       body.classList.add('hide')
+      facilitadoras.classList.add('hide')
       whatsapp.classList.remove('hide')
       whatsapp.classList.add('show')
       topFunction()
