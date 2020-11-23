@@ -6,326 +6,268 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet/less" type="text/css" href="less/styles.less" /> -->
     <link rel="shortcut icon" href="src/img/favicon.ico" >
-    <link rel="stylesheet/less" type="text/css" href="less/styles.less">
+    <!-- <link rel="stylesheet/less" type="text/css" href="less/styles.less"> -->
+    <link rel="stylesheet/less" type="text/css" href="less/styleswhatsapp.less">
+
     <!-- <link rel="stylesheet" href="less/styles.css" /> -->
-    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+    <!-- <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"> -->
 
     <script src="js/less.min.js" ></script>
     <script src="node_modules/jquery/dist/jquery.min.js" ></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-    <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
-
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: 'Didact Gothic', sans-serif;
-        font-weight: 400;
-        background: #2193b0;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        background: url(src/img/zebra_bg.jpeg);
-        background-repeat: no-repeat;
-        background-position: -100px 0;
-      }
-      
-      div#body {
-        max-width: 600px;
-          width: 100%;
-          padding: 15px;
-          background: #fff;
-          position: absolute;
-          right: 80px;
-          letter-spacing: 2px;
-          /* border: 5px solid #d8ff00; */
-          border-radius: 20px;
-          padding: 25px;
-          top: 50%;
-          transform: translate(0%, -50%);
-      }
-
-      .message {
-        line-height: 220%;
-      }
-      
-      .messageTitle {
-         line-height: 200%;
-         font-size: 22px;
-      }
-
-      #mc_embed_signup form {
-          display: block;
-          position: relative;
-          text-align: left;
-          padding: 0;
-      }
-
-      #mc_embed_signup .button {
-          clear: both;
-          background-color: #aaa;
-          border: 0 none;
-          border-radius: 4px;
-          transition: all 0.23s ease-in-out 0s;
-          color: #FFFFFF;
-          cursor: pointer;
-          display: inline-block;
-          font-size: 15px;
-          font-weight: normal;
-          height: unset;
-          line-height: unset;
-          margin: 0 5px 10px 0;
-          padding: 0 22px;
-          text-align: center;
-          text-decoration: none;
-          white-space: nowrap;
-          width: auto;
-          width: 100%;
-          max-width: 360px;
-          padding: 15px;
-          background: #a59200;
-          font-size: 18px;
-          font-weight: 600;
-          outline: none;
-      }
-      /* #mc_embed_signup .clear {
-        display: flex;
-              align-items: center;
-              justify-content: center;
-      } */
-      #mc_embed_signup .button:hover {
-          background-color: #2b2b2b;
-      }
-
-      div#mc_embed_signup_scroll {
-          margin: 10px 0px 20px;
-      }
-
-      .inputField {
-        margin: 20px 0;
-        /* display: flex;
-        align-items: center;
-        justify-content: center; */
-      }
-
-      .inputField input {
-        padding: 10px 15px;
-        outline: none;
-        max-width: 360px;
-        width: 100%;
-      }
-
-      .hide {
-        display: none !important;
-      }
-
-      .show {
-        display: block !important;
-      }
-
-
-
-      @media (max-width: 767px) {
-
-        div#body {
-          right: unset;
-          position: unset;
-          align-content: normal;
-          border: unset;
-          margin: 308px 10px 20px;
-          transform: unset;
-          top: unset;
-        }
-
-        .message {
-          line-height: 220%;
-          font-size: 20px;
-        }
-
-        div#whatsapp {
-          margin: 160px 0 0;
-          text-align: center;
-        }
-
-        body {
-          background-position: -245px 0;
-        }
-
-      }
-
-      #regards {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 600;
-        max-width: 360px;
-        width: 100%;
-      }
-
-      #regards img{
-        margin: 0 10px 0 0;
-      }
-
-      #whatsapp {
-        display: none;
-      }
-
-      #whatsapp  button {
-        padding: 10px 20px 10px 10px;
-        background-color: rgb(52, 175, 35);
-        font-size: 18px;
-        color: #fff;
-        border-radius: 42px;
-        font-weight: 600;
-        border: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        outline: none;
-        transition: background-color ease 0.3s;
-        cursor: pointer;
-      }
-
-      #whatsapp  button:hover {
-        background-color: rgb(34, 130, 21);
-        transition: background-color ease 0.3s;
-      }
-
-      #whatsapp  i {
-        font-size: 42px;
-        margin: 0 10px 0;
-      }
-      #whatsapp.show {
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-      }
-
-      .whatsapp {
-        padding: 30px;
-        /* background: #ffffffb8; */
-        font-size: 22px;
-        font-weight: 600;
-      }
-
-    </style>
-
 </head>
-<body>
+<body> 
 
-<div id="body" >
+  <section id="body">
+
+    <div id="image">
+      <img class="imgDesk" src="src/img/zebra_bg.svg" alt="">
+      <img class="imgMobile" src="src/img/zebra_bg_mobile.jpg" alt="">
+    </div>
+
+    <div id="message">
   
-  <div class="message">
-    <span class="messageTitle"><b>TRILOGIA DO SER</b></span>
-    <br>
-    <span>
-      Você se sente deslocada neste mundo?<br>
-      Tem a sensação de que é um peixe fora d’água? <br>
-      Sente vontade de mudar, mas não sabe exatamente por onde começar?<br> 
-      Então, aproveite nossos 3 encontros, exclusivos e gratuitos, <b>dias 25, 26 e 27/11 às 19:30h</b> para descobrir o porquê de estar se sentindo assim... <br>
-      Abordaremos temas que permeiam essas questões através da visão de uma coach, uma educadora e uma empreendedora. <br>
-    </span>
-  </div>
-
-  <!-- Begin Mailchimp Signup Form -->
-  <div id="mc_embed_signup">
-    <form action="https://projetoser.us2.list-manage.com/subscribe/post?u=d9e714884f94a3de9c1e1b957&amp;id=c75ab8b3f7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-      <div id="mc_embed_signup_scroll">
-        <!-- <h2>Subscribe</h2> -->
-        <div class="subscribeMessage">
-          <span><b>Deixe seu email para receber todos os detalhes:</b> </span>
-        </div>
-        <!-- <div class="indicates-required"><span class="asterisk">*</span> indicates required</div> -->
-        <div class="inputField">
-          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Insira o seu email">
-        </div>
-      
-        <div id="mce-responses" class="clear">
-          <div class="response" id="mce-error-response" style="display:none"></div>
-          <div class="response" id="mce-success-response" style="display:none"></div>
-        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d9e714884f94a3de9c1e1b957_c75ab8b3f7" tabindex="-1" value=""></div>
-        <div class="clear"><input type="submit" value="Inscrever" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+      <div id="messageBox" class="message hideContent">
+        <span class="messageTitle"><b>TRILOGIA DO SER</b></span>
+        <br>
+        <span class="messageText">
+          Você se sente deslocada neste mundo?<br>
+          Tem a sensação de que é um peixe fora d’água? <br>
+          Sente vontade de mudar, mas não sabe exatamente por onde começar?<br> 
+          Então, aproveite nossos 3 encontros, exclusivos e gratuitos, <b>dias 25, 26 e 27/11 às 19:30h</b> para descobrir o porquê de estar se sentindo assim... <br>
+          Abordaremos temas que permeiam essas questões através da visão de uma coach, uma educadora e uma empreendedora. <br>
+        </span>
       </div>
-    </form>
-  </div>
-  <!--End mc_embed_signup-->
-  
-  <div id="regards">
-    <img src="src/img/logo.png" width="25px" alt="">
-    <span>
-      Time do SER
-    </span>
-  </div>
+    
+      <!-- Begin Mailchimp Signup Form -->
+      <div id="mc_embed_signup">
+        <form action="https://projetoser.us2.list-manage.com/subscribe/post?u=d9e714884f94a3de9c1e1b957&amp;id=c75ab8b3f7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <!-- <h2>Subscribe</h2> -->
+            <div class="subscribeMessage hideContent">
+              <span><b>Deixe seu email para receber todos os detalhes:</b> </span>
+            </div>
+            <!-- <div class="indicates-required"><span class="asterisk">*</span> indicates required</div> -->
+            
+            <div class="formData hideContent">
+              <div class="inputField">
+                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Insira o seu email">
+              </div>
+              <div class="clear">
+                <input type="submit" value="Inscrever" name="subscribe" id="mc-embedded-subscribe" class="button">
+              </div>
+            </div>
+          
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none">
+              
+                
+              
+              </div>
+            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d9e714884f94a3de9c1e1b957_c75ab8b3f7" tabindex="-1" value=""></div>
+            
+          </div>
+        </form>
+      </div>
+      <!--End mc_embed_signup-->
+      
+      <div id="regards" class="hideContent">
+        <img src="src/img/logo.png" width="25px" alt="">
+        <span>
+          Time do SER
+        </span>
+      </div>
+    
+    
+    </div>
+
+    <div id="whatsapp" class="hide">
+      <div class="whatsapp">
+        <span>Participe do Nosso Grupo</span>
+      </div>
+      <button onclick="whatsApp()"> <i class="fa fa-whatsapp"></i> WhatsApp </button>
+    </div>
+
+  </section>
 
 
-</div>
+  <!-- facilitadoras -->
+    <section id="facilitadoras">
 
-<div id="whatsapp">
-  <div class="whatsapp">
-    <span>Participe do Nosso Grupo</span>
-  </div>
-  <button onclick="whatsApp()"> <i class="fa fa-whatsapp"></i> WhatsApp </button>
-</div>
-   
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+      <div class="sectionContainer">
+          <div class="facilitadorasTitle siteTitle">
+              Facilitadoras
+          </div>
+
+          <div class="facilitadoras">
+          <!-- dani -->
+          <div class="facilitadorasBox">
+
+              <div class="facilitadora">
+
+                  <div class="image">
+                      <img src="src/img/dani.jpeg" alt="">
+                  </div>
+
+                  <div class="nome">
+                      <span>
+                          Danielle Tiso
+                      </span>
+                  </div>
+
+                  <div class="social">
+                      <a href="https://instagram.com/danielletisocoach?igshid=1dppyl4w8fb4k" target="_blank" class="socialLink">
+                          @danielletisocoach
+                      </a>
+                  </div>
+
+                  <div class="descricao">
+                      <span>
+                          Minha missão é servir e apoiar o desenvolvimento humano. Sou Coach, Farmacêutica-bioquímica e especialista em saúde com 16 anos de atuação.
+                      </span>
+                  </div>
+
+              </div>
+
+          </div>
+          <!-- josi -->
+          <div class="facilitadorasBox">
+
+              <div class="facilitadora">
+
+                  <div class="image">
+                      <img src="src/img/josi.jpeg" alt="">
+                  </div>
+
+                  <div class="nome">
+                      <span>
+                          Josi Lemos
+                      </span>
+                  </div>
+
+                  <div class="social">
+                      <a href="https://instagram.com/_josilemos?igshid=13hmkkutxn5db" target="_blank" class="socialLink">
+                          @_josilemos
+                      </a>
+                  </div>
+
+                  <div class="descricao">
+                      <span>
+                          Com olhar cuidadoso, leveza, flexibilidade e organização, busco proporcionar experiências de aprendizagem significativas para as pessoas, baseadas em tecnologias humanas e digitais.
+                      </span>
+                  </div>
+
+              </div>
+
+          </div>
+
+          <!-- quesia -->
+          <div class="facilitadorasBox">
+
+              <div class="facilitadora">
+
+                  <div class="image">
+                      <img src="src/img/quesia.jpeg" alt="">
+                  </div>
+
+                  <div class="nome">
+                      <span>
+                          Quésia Nascimento
+                      </span>
+                  </div>
+
+                  <div class="social">
+                      <a href="https://instagram.com/quesianascimentoo?igshid=16u4dlxrj1v0d" target="_blank" class="socialLink">
+                          @quesianascimentoo
+                      </a>
+                  </div>
+
+                  <div class="descricao">
+                      <span>
+                          Especialista em desenvolvimento de projetos de negócios e de vida. Há 5 anos transitando entre as nuances do SER e do empreender com propósito.
+                      </span>
+                  </div>
+
+              </div>
+
+          </div>
+          </div>
+      </div>
+
+    </section>
+  <!-- / -->
+
+
+<script type='text/javascript' src='js/mailChimpRequest.js'></script>
+
 <script type='text/javascript'>
+  ( function($) {
+      window.fnames = new Array(); 
+      window.ftypes = new Array();
+      fnames[0]='EMAIL';
+      ftypes[0]='email';
+      fnames[1]='FNAME';
+      ftypes[1]='text';
+      fnames[2]='LNAME';
+      ftypes[2]='text';
+      fnames[3]='ADDRESS';
+      ftypes[3]='address';
+      fnames[4]='PHONE';
+      ftypes[4]='phone';
+      fnames[5]='BIRTHDAY';
+      ftypes[5]='birthday';
+    }
 
-  var triggerSubcribe = localStorage.getItem('subscribed')
+    (jQuery)
+  );
+  
+  var $mcj = jQuery.noConflict(true);
+  
+</script>
 
-  // if (triggerSubcribe == 'true') {
-  //   $("#whatsapp").removeClass('hide')
-  //   $("#whatsapp").addClass('show')
-  // } else {
-  //   $("#mc_embed_signup").removeClass('hide')
-  // }
+<script type='text/javascript'>
+        function whatsApp() {
+            // var whatsUrl = 'https://chat.whatsapp.com/DLr14s3lyKF5y42YFUvG0h' 
+            var whatsUrl = 'https://chat.whatsapp.com/I2eH1VrUjLB1U86xYc0YSA' 
 
-  setInterval(function(){
-    // if($('#mce-error-response').css('display') == 'block' || $('#mce-success-response').css('display') == 'block' ){
-    //   console.log('true');
-    //   $("#body").addClass('hide')
-    //   $("#whatsapp").removeClass('hide')
-    //   $("#whatsapp").addClass('show')
-    //   localStorage.setItem('subscribed', 'false')
-    // } 
+            var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+            console.log('SAFARI: ', isSafari)
+                        
+            if (isSafari == true ) {
+            window.location.assign(whatsUrl)
+            } else { 
+            window.open(whatsUrl, '_blank')
+            }
+        }
 
-    var hasEmail = document.getElementById("mce-error-response")
-    var hasEmailDisplay = hasEmail.style.display
+        setInterval(function(){
 
     var subscribedEmail = document.getElementById("mce-success-response")
     var subscribedEmailDisplay = subscribedEmail.style.display
 
-    var body = document.getElementById("body")
+    var body = document.getElementById("message")
     var whatsapp = document.getElementById("whatsapp")
 
-    if (subscribedEmailDisplay == "block" || hasEmailDisplay == "block") {
-      console.log('true');
+    if (subscribedEmailDisplay != "none") {
       body.classList.add('hide')
       whatsapp.classList.remove('hide')
       whatsapp.classList.add('show')
+      topFunction()
     }
 
 
   },1000);
 
-  function whatsApp() {
-    
-    // var whatsUrl = 'https://chat.whatsapp.com/DLr14s3lyKF5y42YFUvG0h' 
-    var whatsUrl = 'https://chat.whatsapp.com/I2eH1VrUjLB1U86xYc0YSA' 
+  function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 
-    var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
-    console.log('SAFARI: ', isSafari)
-                
-    if (isSafari == true ) {
-      window.location.assign(whatsUrl)
-    } else { 
-      window.open(whatsUrl, '_blank')
-    }
-  }
 </script>
+
 <!-- Facebook Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)

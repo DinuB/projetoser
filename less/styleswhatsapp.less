@@ -1,0 +1,313 @@
+// variables
+@desk: ~'(min-width: 768px)';
+@mobile: ~'(max-width: 767px)';
+@azulClaro: #0087ad;
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+
+// style
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.hide {
+    display: none !important;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    // font-family: 'Roboto', sans-serif;
+    // font-family: 'Didact Gothic', sans-serif;
+    cursor: default;
+    
+    @media @desk {
+        background: url('../src/img/dandlion.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        -webkit-background-size: cover;
+    }
+
+}
+
+section {
+
+    // padding: 50px 25px;
+
+    .sectionContainer {
+        max-width: 1024px;
+        margin: 0 auto;
+
+        padding: 15px;
+
+        @media @mobile {
+            padding: 25px 15px;
+        }
+    }
+}
+
+.siteTitle {
+    font-size: 36px;
+    font-weight: 600;
+
+    @media @mobile {
+        font-size: 28px !important;
+        margin: 0 0 15px;
+    }
+}
+
+section#body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(255, 255, 255, 0.82);
+    @media @mobile {
+        flex-direction: column;
+    }
+
+    div#image {
+
+        .imgDesk {
+            height: 100vh;
+            @media @mobile {
+                display: none;
+            }
+        }
+
+        .imgMobile {
+            width: 100%;
+
+            @media @desk {
+                display: none;
+            }
+        }
+    }
+
+    div#message {
+        padding: 25px;
+        max-width: 550px;
+        margin: 0 auto;
+       
+        .message {
+            .messageTitle {
+                font-size: 32px;
+                line-height: 200%;
+                letter-spacing: 2px;
+            }
+
+            .messageText {
+                font-size: 18px;
+                line-height: 150%;
+                letter-spacing: 2px;
+            }
+        }
+
+        #mc_embed_signup {
+            margin: 20px 0;
+
+            .subscribeMessage {
+                margin: 0 0 10px;
+            }
+
+            .formData {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                .inputField {
+                    margin: 0 10px 0 0;
+                    max-width: 290px;
+                    width: 100%;
+
+                    input#mce-EMAIL {
+                        padding: 9px 12px;
+                        border-radius: 4px;
+                        outline: none;
+                        border: 1px solid #f400f9;
+                        width: 100%;
+                        font-size: 16px;
+                        letter-spacing: 1px;
+                    }
+                }
+
+                input#mc-embedded-subscribe {
+                    /* height: 35px; */
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: #fff;
+                    background-color: #f400f9;
+                    border: none;
+                    border-radius: 4px;
+                    padding: 8px 10px;
+                    cursor: pointer;
+                    transition: all ease 0.3s;
+
+                    &:hover {
+                        background-color: #a200a5;
+                        transition: all ease 0.3s;
+                    }
+                }
+            }
+        }
+    }
+
+    div#regards {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        img {
+            margin: 0 10px 0 0;
+            width: 42px;
+        }
+
+        span {
+            font-size: 16px;
+            font-weight: 600; 
+        }
+    }
+
+    div#mce-responses {
+        margin: 10px 0;
+    }
+
+    #whatsapp {
+        &.hide {
+            display: none;
+        }
+        
+        @media @desk {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @media @mobile {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        &.show {
+            display: flex !important;
+        }
+
+        .whatsapp {
+            padding: 30px;
+            /* background: #ffffffb8; */
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        button {
+            padding: 10px 20px 10px 10px;
+            background-color: rgb(52, 175, 35);
+            font-size: 18px;
+            color: #fff;
+            border-radius: 42px;
+            font-weight: 600;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+            transition: background-color ease 0.3s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(34, 130, 21);
+                transition: background-color ease 0.3s;
+            }
+        }
+
+        i {
+            font-size: 42px;
+            margin: 0 10px 0;
+        }
+    
+      }
+}
+
+#facilitadoras {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media @desk {
+        min-height: 100vh;
+    }
+    background: rgba(255, 255, 255, 1);
+
+    .facilitadorasTitle.siteTitle {
+        text-align: center;
+        margin: 0px 0 0px;
+    }
+
+    .facilitadoras {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        @media @mobile {
+            flex-direction: column;
+        }
+
+        .facilitadorasBox {
+            padding: 20px;
+            width: 100%;
+            max-width: 360px;
+            min-height: 300px;
+            text-align: center;
+            // box-shadow: 2px 2px 6px 3px #dedada;
+            margin: 16px;
+            // cursor: pointer;
+
+            @media @mobile {
+                text-align: center;
+                padding: 15px;
+                width: unset;
+                min-height: unset;
+            }
+
+            // &:hover {
+            //     box-shadow: 3px 6px 6px 3px #dedada;
+            // }
+
+            img {
+                max-width: 150px;
+                border-radius: 50%;
+                margin: 0 0 20px;
+            }
+
+            .nome {
+                font-size: 20px;
+                font-weight: 500;
+                margin: 0 0 10px;
+            }
+
+            .social {
+                text-decoration: none;
+                margin: 0 0 15px;
+
+                a {
+                    text-decoration: none;
+                    color: #2b2b2b;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+}
